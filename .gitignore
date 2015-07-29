@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log
+.vagrant
+azure.*
+.tags*
+*.sublime-workspace
+.env.*
+.env
+.env_*
+.directory
+pkgscript.log
+.c9revisions
+.idea
+.settings
+.dist

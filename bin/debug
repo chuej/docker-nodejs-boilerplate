@@ -1,0 +1,2 @@
+#!/bin/bash
+DEBUG=* node_modules/.bin/nodemon -w . -x node_modules/.bin/coffee app/server.coffee

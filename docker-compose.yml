@@ -1,0 +1,16 @@
+boilerplate:
+  command: ["npm", "run-script","debug"]
+  build: "./"
+  ports:
+    - "9000:5000"
+    - "5000"
+  environment:
+    SERVICE_NAME: test
+    NODE_ENV: development
+    MONGO_URI: 172.17.42.1:27010:/boilerplate
+    TEST_MONGO_URI: 172.17.42.1:27010:/boilerplate-test
+  volumes:
+    - app:/opt/app/app
+    - bin:/opt/app/bin
+  dns:
+    - 172.17.42.1
