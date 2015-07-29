@@ -1,3 +1,7 @@
+###
+For use with Makefile workflow only.
+###
+###
 request = require 'request'
 assert = require 'assert'
 describe 'Test Route', ()->
@@ -10,3 +14,4 @@ describe 'Test Route', ()->
       return done()
   it 'should respond', ()->
     assert.equal @respBody, 'hello world!'
+###
