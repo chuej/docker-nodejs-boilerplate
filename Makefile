@@ -19,6 +19,7 @@ setup:
 		--env MONGO_URI=${MONGO_URI} \
 		--dns 172.17.42.1 \
 		-p "9000:5000" \
+		-v `pwd`/app:/opt/app/app \
 		${IMAGE};
 run: build setup
 teardown: test_teardown
@@ -31,6 +32,8 @@ test_setup:
 		--env MONGO_URI=${MONGO_URI} \
 		--env TEST_MONGO_URI=${TEST_MONGO_URI} \
 		--dns 172.17.42.1 \
+		--expose 5000 \
+		-v `pwd`/app:/opt/app/app \
 		${IMAGE};
 test_teardown:
 	-docker rm -f ${CONTAINER}_test
